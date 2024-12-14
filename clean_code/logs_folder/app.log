@@ -1,0 +1,6 @@
+2024-12-14T19:14:52.606810+0300 | INFO | app:29 | config dosyasi yuklendi
+2024-12-14T19:14:52.606810+0300 | INFO | app:33 | Görüntü işleme baslatiliyor...
+2024-12-14T19:14:52.855857+0300 | INFO | streamer:16 | Kamera basariyla acildi.
+2024-12-14T19:14:55.378134+0300 | INFO | app:55 | Goruntu isleme durduruldu.
+2024-12-14T19:14:55.801957+0300 | INFO | streamer:23 | Kamera basariyla kapatildi.
+2024-12-14T19:14:55.823646+0300 | INFO | app:66 | Kaynaklar serbest birakildi ve pencereler kapatildi.
