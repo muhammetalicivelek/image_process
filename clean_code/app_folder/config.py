@@ -11,8 +11,8 @@ class Config:
     def load_config(self):
         """Loads the configuration file."""
         if not os.path.exists(self.config_path):
-            logger.error("log dosyasi yuklenemedi.")
-            raise Exception("log dosyasi yuklenemedi.")
+            logger.error("config dosyasi bulunamadi.")
+            raise Exception("config dosyasi bulunamadi.")
 
         with open(self.config_path, 'r') as file:
             self.config = toml.load(file)

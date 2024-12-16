@@ -12,10 +12,9 @@ from app_folder.logger import LogManager
 class ImageProcessingApp:
     def __init__(self):
         """Initialize application components."""
-        # LogManager'i başlat ve logger'ı al
-        self.log_manager = LogManager()
-        self.logger = self.log_manager.get_logger()
-
+        
+        self.logger = LogManager().get_logger()
+        self.logger.info("log sistemi baslatildi.")
         self.config_manager = Config()
         self.detector = ColorObjectDetector()
         self.streamer = VideoStreamer()
@@ -30,7 +29,7 @@ class ImageProcessingApp:
     
     def start_processing(self):
         """Start the image processing process."""
-        self.logger.info("Görüntü işleme baslatiliyor...")
+        self.logger.info("Görüntü işleme baslatildi")
 
         self.cap = self.streamer.start_stream()
 
@@ -47,10 +46,8 @@ class ImageProcessingApp:
             # Renk algılama ve işleme
             processed_frame = self.detector.process_frame(frame)
 
-            # İşlenen kareyi göster
             cv2.imshow("Processed Video Stream", processed_frame)
 
-            # Çıkmak için ESC tuşuna basın
             if cv2.waitKey(1) & 0xFF == 27:
                 self.logger.info("Goruntu isleme durduruldu.")
                 break
